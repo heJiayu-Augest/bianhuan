@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>根据不同的窗口尺寸来选择使用不同的样式的示例</title>
+	<style type="text/css">
+		#container{
+			width: 1200px;
+			margin: auto;
+		}
+		#part{
+			width: 900px;
+			float: left;
+		}
+		p{
+			height: 60px;
+			color: white;
+			font-size: 30px;
+			text-align: center;
+			line-height: 60px;
+		}
+		#sub1{
+			width: 300px;
+			float: left;
+			background: red;
+		}
+		#sub2{
+			width: 300px;
+			float: left;
+			background: blue;
+		}
+		#sub3{
+			width: 300px;
+			float: left;
+			background: black;
+		}
+		#sub4{
+			width: 300px;
+			float: right;
+			background: orange;
+		}
+		@media screen and (min-width:992px) and (max-width:1200px){
+			#container{
+				width:990px;
+			}
+			p{
+				height: 60px;
+				margin: 0 auto;
+			}
+			#part{
+				width: 990px;
+				float: none;
+			}
+			#sub1{
+				width:990px;
+			}
+			#sub2{
+				width: 330px;
+				float: left;
+			}
+			#sub3{
+				width: 330px;
+				float: left;
+			}
+			#sub4{
+				width: 330px;
+				float: right;
+			}
+		}
+		@media screen and (min-width:768px) and (max-width:992px){
+			#container{
+				width:768px;
+			}
+			p{
+				height: 60px;
+				margin: 0 auto;
+			}
+			#part{
+				float:none;
+
+			}
+			#sub1{
+				width:384px;
+				float: left;
+			}
+			#sub2{
+				width: 384px;
+				float: left;
+			}
+			#sub3{
+				width: 384px;
+				float: left;
+			}
+			#sub4{
+				width: 384px;
+				float: left;
+			}
+		}
+
+		@media screen and (max-width:768px) {
+			#container{
+				width: 100%
+			}
+			p{
+				height: 60px;
+				margin: 0 auto;
+			}
+			#part{
+				width:100%;float: none;
+			}
+			#sub1{width: 100%;float: none;}
+			#sub2{width: 100%;float: none;}
+			#sub3{width: 100%;float: none;}
+			#sub4{width: 100%;float: none;}
+		} 
+	</style>
+</head>
+<body>
+	<div id="container">
+		<p id="sub1">1</p>
+		<div id="part">
+			<p id="sub2">2</p>
+			<p id="sub3">3</p>
+			<p id="sub4">4</p>
+		</div>
+	</div>
+</body>
+</html>
